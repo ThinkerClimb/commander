@@ -26,4 +26,4 @@ START   Open highlighted directory in destination panel.
         If a file is highlighted, open current directory
         in the destination panel.
 
-https://github.com/FunKey-Project/commander
+https://github.com/Anbernic-Project/commander

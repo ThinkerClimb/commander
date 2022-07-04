@@ -1,5 +1,5 @@
 /*
-    FK - FunKey retro gaming console library
+    FK - Anbernic retro gaming console library
     Copyright (C) 2020-2021 Vincent Buso
     Copyright (C) 2020-2021 Michel Stempin
 
@@ -18,14 +18,14 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
     Vincent Buso
-    vincent.buso@funkey-project.com
+    vincent.buso@anbernic-project.com
     Michel Stempin
-    michel.stempin@funkey-project.com
+    michel.stempin@anbernic-project.com
 */
 
 /**
  *  @file FK_Instant_Play.h
- *  This is the Instant Play API for the FunKey retro gaming console library
+ *  This is the Instant Play API for the Anbernic retro gaming console library
  */
 
 #ifndef _FK_instant_play_h

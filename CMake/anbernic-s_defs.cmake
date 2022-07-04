@@ -1,7 +1,7 @@
 set(USE_SDL2 OFF)
 set(FILE_SYSTEM \"/dev/mmcblk0p4\")
 set(PATH_DEFAULT \"/mnt\")
-set(PATH_DEFAULT_RIGHT \"/mnt/FunKey\")
+set(PATH_DEFAULT_RIGHT \"/mnt/Anbernic\")
 set(SCREEN_WIDTH 240)
 
 set(MYKEY_UP SDLK_u) # Up
