@@ -30,7 +30,7 @@ BUILDROOT=<path to buildroot> ./build.sh rg350
 
 The package will be built at `build-retrofw/commander.ipk`.
 
-To build for Anbernic S, run:
+To build for Anbernic, run:
 
 ```bash
 TOOLCHAIN=<path to toolchain> ./build.sh anbernic-s
