@@ -4,7 +4,7 @@ declare -ra VALID_TARGETS=(
   rg350
   rs90
   rg99
-  anbernic-s
+  anbernic
 )
 
 usage_target() {

@@ -33,10 +33,10 @@ The package will be built at `build-retrofw/commander.ipk`.
 To build for Anbernic, run:
 
 ```bash
-TOOLCHAIN=<path to toolchain> ./build.sh anbernic-s
+TOOLCHAIN=<path to toolchain> ./build.sh anbernic
 ```
 
-The package will be built at `build-anbernic-s/commander-anbernic-s.opk`.
+The package will be built at `build-anbernic/commander-anbernic.opk`.
 
 To build for the host system, run:
 
