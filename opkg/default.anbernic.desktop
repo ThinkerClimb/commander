@@ -8,3 +8,4 @@ Type=Application
 StartupNotify=true
 Categories=applications;
 X-OD-Manual=readme.anbernic.txt
+Name[zh_CN]=default.anbernic.desktop
