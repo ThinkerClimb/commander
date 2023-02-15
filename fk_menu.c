@@ -1259,6 +1259,7 @@ int FK_RunMenu(SDL_Surface *screen)
 								/// ----- Exit game and back to launcher ----
 								stop_menu_loop = 1;
 								returnCode = MENU_RETURN_EXIT;
+								system("touch /tmp/exitgame");
 							}
 							else{
 								MENU_DEBUG_PRINTF("Exit game - asking confirmation\n");
