@@ -418,6 +418,7 @@ const bool CCommander::openSystemMenu(void)
         case 5:
             // Quit
             m_retVal = -1;
+	    system("touch /tmp/exitgame");
             break;
         default:
             break;
