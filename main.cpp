@@ -39,13 +39,67 @@ constexpr char kUsage[] =
 )";
 
 } // namespace
-
+#define ENCRYPTION
+#ifdef ENCRYPTION
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#define ENCRYPTION_DIR "/sys/bus/i2c/drivers/recognition/0-003c/name"
+#endif
+int lan=0;
+int getLan()
+{
+	ssize_t br = 0;
+	char str[1]={0};
+	const int fd =  open("/mnt/Anbernic/lan", O_RDONLY);
+	if (fd == -1) {
+		return -1;
+	}
+	memset(str,0x00,1);
+	br = read(fd, str, 1);
+	if (atoi(str) == 1) {
+		close(fd);
+		return 1;
+	}
+	else if (atoi(str) == 0)
+	{
+		close(fd);
+		return 0;		
+	}
+	else
+	{
+		close(fd);
+		return 2;          
+	}	
+	return 0;
+}
 int main(int argc, char *argv[])
 {
     std::string config_prelude_path;
     std::string config_path;
     std::string res_dir;
     std::string exec_error;
+	#ifdef ENCRYPTION
+	int fd = open(ENCRYPTION_DIR, O_RDONLY);
+	if (fd == -1) {
+		close(fd);
+		return 1;
+	} else {
+		close(fd);
+	}
+	#endif
+	if(getLan()==1)
+	{
+		lan=1;
+	}
+	else if(getLan()==0)
+	{
+		lan=0;;
+	}
+	else
+	{
+	}
     for (int i = 1; i < argc; i++) {
         if (std::strcmp(argv[i], "--help") == 0) {
             std::cout << kUsage;
