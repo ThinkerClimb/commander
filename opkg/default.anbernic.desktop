@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Commander
+Name[ch]=文件管理
 Comment=Two-pane file manager
 Exec=commander
 Icon=commander
@@ -8,4 +9,3 @@ Type=Application
 StartupNotify=true
 Categories=applications;
 X-OD-Manual=readme.anbernic.txt
-Name[zh_CN]=default.anbernic.desktop
