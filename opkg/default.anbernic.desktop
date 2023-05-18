@@ -2,6 +2,7 @@
 Name=Commander
 Name[ch]=文件管理
 Comment=Two-pane file manager
+Comment[ch]=文件管理器英文版
 Exec=commander
 Icon=commander
 Terminal=false
