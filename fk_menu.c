@@ -375,7 +375,14 @@ static void add_menu_zone(ENUM_MENU_TYPE menu_type)
 	case MENU_TYPE_RO_RW:
 		MENU_DEBUG_PRINTF("Init MENU_TYPE_RO_RW\n");
 		/// ------ Text ------
-		text_surface = TTF_RenderUTF8_Blended(menu_title_font, "SET SYSTEM:", text_color);
+		if(lan==1)
+		{
+			text_surface = TTF_RenderUTF8_Blended(menu_title_font, "设置系统:", text_color);
+		}
+		else
+		{
+			text_surface = TTF_RenderUTF8_Blended(menu_title_font, "SET SYSTEM:", text_color);		
+		}
 		text_pos.x = (surface->w - MENU_ZONE_WIDTH)/2 + (MENU_ZONE_WIDTH - text_surface->w)/2;
 		text_pos.y = surface->h - MENU_ZONE_HEIGHT/2 - text_surface->h/2 - padding_y_from_center_menu_zone*2;
 		SDL_BlitSurface(text_surface, NULL, surface, &text_pos);
@@ -385,7 +392,14 @@ static void add_menu_zone(ENUM_MENU_TYPE menu_type)
 	case MENU_TYPE_EXIT:
 		MENU_DEBUG_PRINTF("Init MENU_TYPE_EXIT\n");
 		/// ------ Text ------
-		text_surface = TTF_RenderUTF8_Blended(menu_title_font, "EXIT APP", text_color);
+		if(lan==1)
+		{
+			text_surface = TTF_RenderUTF8_Blended(menu_title_font, "退出应用", text_color);
+		}
+		else
+		{
+			text_surface = TTF_RenderUTF8_Blended(menu_title_font, "EXIT APP", text_color);		
+		}
 		text_pos.x = (surface->w - MENU_ZONE_WIDTH)/2 + (MENU_ZONE_WIDTH - text_surface->w)/2;
 		text_pos.y = surface->h - MENU_ZONE_HEIGHT/2 - text_surface->h/2;
 		SDL_BlitSurface(text_surface, NULL, surface, &text_pos);
